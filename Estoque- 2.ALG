@@ -1,8 +1,9 @@
 Algoritmo "Controle de Estoque"
- //Disciplina : Linguagem de ProgramaÁ„o I
+ //Disciplina : Linguagem de Programa√ß√£o I
  //Professor  : Bruno Torres
  //Aluno      : Gabriel Barbosa do Amaral
 
+//Vers√£o 2
 
 Var
    descricoes  :vetor [1..4] de caractere
@@ -13,40 +14,40 @@ Var
    fimcad     :real
    icod       :inteiro
 procedimento cadastro_item
-//Respons·vel em cadastar um produto no vetor
+//Respons√°vel em cadastar um produto no vetor
 //1-Produto a ser cadastrado
 
 Inicio
-   codItem <- codItem+1 //constante que dar· o cÛdigo ao produto
+   codItem <- codItem+1 //constante que dar√° o c√≥digo ao produto
    escreval("**  Cadastro de produto  **")
-   escreva ("DescriÁ„o :")
+   escreva ("Descri√ß√£o :")
    leia(descricoes[codItem])
    escreva ("Quantidade :")
    leia(quantidades[codItem])
    limpatela
-   //Abaixo ir· mostrar o produto cadastrado e suas informaÁıes
+   //Abaixo ir√° mostrar o produto cadastrado e suas informa√ß√µes
    escreval()
    escreval()
    escreval ("Produto cadastrado :",descricoes[coditem])
-   escreval ("CÛdigo :",coditem)
+   escreval ("C√≥digo :",coditem)
    escreval ("Quantidade :",quantidades[coditem])
    escreval()
-   escreval ("Para visualizar o cÛdigo novamente, imprima o relatÛrio")
+   escreval ("Para visualizar o c√≥digo novamente, imprima o relat√≥rio")
    escreval ("de produtos.")
    escreval()
    escreval("Pressione ENTER para voltar ao menu")
    leia(opc)
 fimProcedimento
 
-procedimento imprimir_produtos()//Respons·vel em exibir os dados dos produtos
+procedimento imprimir_produtos()//Respons√°vel em exibir os dados dos produtos
 Var
    i :inteiro
 Inicio
-   escreval("VocÍ possui no estoque os seguintes itens: ")
-   para i de 1 ate codItem faca //do primeiro atÈ a quantidade j· cadastrada
+   escreval("Voc√™ possui no estoque os seguintes itens: ")
+   para i de 1 ate codItem faca //do primeiro at√© a quantidade j√° cadastrada
       escreval()
-      escreval("CÛdigo :",i)
-      escreval("DescriÁ„o : ",descricoes[i])
+      escreval("C√≥digo :",i)
+      escreval("Descri√ß√£o : ",descricoes[i])
       escreval("Quantidade :",quantidades[i])
       escreval("------------------------------------------")
       escreval()
@@ -56,22 +57,22 @@ Inicio
 fimProcedimento
 
 procedimento editar()
-//Respons·vel em verificar qual produto vai se alterar, coletar os novos dados
-//e solicitar o cadastro da alteraÁ„o no vetor
+//Respons√°vel em verificar qual produto vai se alterar, coletar os novos dados
+//e solicitar o cadastro da altera√ß√£o no vetor
 Var
    novaQtd :inteiro
 Inicio
-   escreval("Insira o cÛdigo do produto que deseja pesquisar: ")
+   escreval("Insira o c√≥digo do produto que deseja pesquisar: ")
    leia(icod)
-   se (icod >=1) E (icod <= codItem) ent„o //verificar se È um cÛdigo v·lido
-      escreval("CÛdigo :",icod) //o cÛdigo È a posiÁ„o no vetor!!!
-      escreval("DescriÁ„o :",descricoes[icod])
+   se (icod >=1) E (icod <= codItem) ent√£o //verificar se √© um c√≥digo v√°lido
+      escreval("C√≥digo :",icod) //o c√≥digo √© a posi√ß√£o no vetor!!!
+      escreval("Descri√ß√£o :",descricoes[icod])
       escreval("Quantidade :",quantidades[icod])
       escreval()
       escreval("Digite a nova quantidade do estoque, ou")
-      escreval("caso n„o queira modificar, digite a quantidade atual.")
+      escreval("caso n√£o queira modificar, digite a quantidade atual.")
       leia(novaQtd)
-      quantidades[icod]:=novaQtd //atualiza a quantidade caso tenha alteraÁao
+      quantidades[icod]:=novaQtd //atualiza a quantidade caso tenha altera√ßao
       escreval("O produto ",descricoes[icod]," agora possui ",quantidades[icod]," unidades")
       escreval()
       escreval("Pressione ENTER para continuar")
